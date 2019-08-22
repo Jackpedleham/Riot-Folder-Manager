@@ -39,24 +39,10 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.cb_studio = New System.Windows.Forms.CheckBox()
-        Me.cb_default = New System.Windows.Forms.CheckBox()
         Me.deadlinedate = New System.Windows.Forms.DateTimePicker()
-        Me.cb_rt = New System.Windows.Forms.CheckBox()
-        Me.cb_vr = New System.Windows.Forms.CheckBox()
-        Me.cb_exterior = New System.Windows.Forms.CheckBox()
-        Me.cb_animation = New System.Windows.Forms.CheckBox()
-        Me.cb_product = New System.Windows.Forms.CheckBox()
-        Me.cb_interior = New System.Windows.Forms.CheckBox()
         Me.txt_number = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.s_templates = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.s_logo = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.s_projects = New System.Windows.Forms.TextBox()
@@ -194,17 +180,17 @@ Partial Class Form1
         '
         'txt_notes
         '
-        Me.txt_notes.Location = New System.Drawing.Point(11, 282)
+        Me.txt_notes.Location = New System.Drawing.Point(11, 233)
         Me.txt_notes.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_notes.Name = "txt_notes"
-        Me.txt_notes.Size = New System.Drawing.Size(353, 143)
+        Me.txt_notes.Size = New System.Drawing.Size(353, 192)
         Me.txt_notes.TabIndex = 5
         Me.txt_notes.Text = ""
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(8, 262)
+        Me.Label9.Location = New System.Drawing.Point(9, 212)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 17)
@@ -215,7 +201,7 @@ Partial Class Form1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(15, 141)
+        Me.TabControl1.Location = New System.Drawing.Point(15, 103)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
@@ -226,20 +212,12 @@ Partial Class Form1
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
-        Me.TabPage1.Controls.Add(Me.cb_studio)
-        Me.TabPage1.Controls.Add(Me.cb_default)
         Me.TabPage1.Controls.Add(Me.deadlinedate)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.txt_notes)
         Me.TabPage1.Controls.Add(Me.btn_Build)
         Me.TabPage1.Controls.Add(Me.cb_brief)
         Me.TabPage1.Controls.Add(Me.txt_projectname)
-        Me.TabPage1.Controls.Add(Me.cb_rt)
-        Me.TabPage1.Controls.Add(Me.cb_vr)
-        Me.TabPage1.Controls.Add(Me.cb_exterior)
-        Me.TabPage1.Controls.Add(Me.cb_animation)
-        Me.TabPage1.Controls.Add(Me.cb_product)
-        Me.TabPage1.Controls.Add(Me.cb_interior)
         Me.TabPage1.Controls.Add(Me.cb_folders)
         Me.TabPage1.Controls.Add(Me.txt_client)
         Me.TabPage1.Controls.Add(Me.txt_contact)
@@ -259,32 +237,6 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "New Project"
         '
-        'cb_studio
-        '
-        Me.cb_studio.AutoSize = True
-        Me.cb_studio.Enabled = False
-        Me.cb_studio.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.cb_studio.Location = New System.Drawing.Point(285, 236)
-        Me.cb_studio.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_studio.Name = "cb_studio"
-        Me.cb_studio.Size = New System.Drawing.Size(70, 21)
-        Me.cb_studio.TabIndex = 7
-        Me.cb_studio.Text = "Studio"
-        Me.cb_studio.UseVisualStyleBackColor = True
-        '
-        'cb_default
-        '
-        Me.cb_default.AutoSize = True
-        Me.cb_default.Checked = True
-        Me.cb_default.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.cb_default.Location = New System.Drawing.Point(12, 212)
-        Me.cb_default.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_default.Name = "cb_default"
-        Me.cb_default.Size = New System.Drawing.Size(75, 21)
-        Me.cb_default.TabIndex = 8
-        Me.cb_default.Text = "Default"
-        Me.cb_default.UseVisualStyleBackColor = True
-        '
         'deadlinedate
         '
         Me.deadlinedate.Location = New System.Drawing.Point(144, 174)
@@ -292,80 +244,6 @@ Partial Class Form1
         Me.deadlinedate.Name = "deadlinedate"
         Me.deadlinedate.Size = New System.Drawing.Size(220, 22)
         Me.deadlinedate.TabIndex = 6
-        '
-        'cb_rt
-        '
-        Me.cb_rt.AutoSize = True
-        Me.cb_rt.Enabled = False
-        Me.cb_rt.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.cb_rt.Location = New System.Drawing.Point(193, 212)
-        Me.cb_rt.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_rt.Name = "cb_rt"
-        Me.cb_rt.Size = New System.Drawing.Size(85, 21)
-        Me.cb_rt.TabIndex = 4
-        Me.cb_rt.Text = "Realtime"
-        Me.cb_rt.UseVisualStyleBackColor = True
-        '
-        'cb_vr
-        '
-        Me.cb_vr.AutoSize = True
-        Me.cb_vr.Enabled = False
-        Me.cb_vr.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.cb_vr.Location = New System.Drawing.Point(193, 236)
-        Me.cb_vr.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_vr.Name = "cb_vr"
-        Me.cb_vr.Size = New System.Drawing.Size(49, 21)
-        Me.cb_vr.TabIndex = 4
-        Me.cb_vr.Text = "VR"
-        Me.cb_vr.UseVisualStyleBackColor = True
-        '
-        'cb_exterior
-        '
-        Me.cb_exterior.AutoSize = True
-        Me.cb_exterior.Location = New System.Drawing.Point(93, 212)
-        Me.cb_exterior.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_exterior.Name = "cb_exterior"
-        Me.cb_exterior.Size = New System.Drawing.Size(78, 21)
-        Me.cb_exterior.TabIndex = 4
-        Me.cb_exterior.Text = "Exterior"
-        Me.cb_exterior.UseVisualStyleBackColor = True
-        '
-        'cb_animation
-        '
-        Me.cb_animation.AutoSize = True
-        Me.cb_animation.Enabled = False
-        Me.cb_animation.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.cb_animation.Location = New System.Drawing.Point(93, 236)
-        Me.cb_animation.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_animation.Name = "cb_animation"
-        Me.cb_animation.Size = New System.Drawing.Size(92, 21)
-        Me.cb_animation.TabIndex = 4
-        Me.cb_animation.Text = "Animation"
-        Me.cb_animation.UseVisualStyleBackColor = True
-        '
-        'cb_product
-        '
-        Me.cb_product.AutoSize = True
-        Me.cb_product.Enabled = False
-        Me.cb_product.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.cb_product.Location = New System.Drawing.Point(285, 212)
-        Me.cb_product.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_product.Name = "cb_product"
-        Me.cb_product.Size = New System.Drawing.Size(79, 21)
-        Me.cb_product.TabIndex = 4
-        Me.cb_product.Text = "Product"
-        Me.cb_product.UseVisualStyleBackColor = True
-        '
-        'cb_interior
-        '
-        Me.cb_interior.AutoSize = True
-        Me.cb_interior.Location = New System.Drawing.Point(12, 236)
-        Me.cb_interior.Margin = New System.Windows.Forms.Padding(4)
-        Me.cb_interior.Name = "cb_interior"
-        Me.cb_interior.Size = New System.Drawing.Size(74, 21)
-        Me.cb_interior.TabIndex = 4
-        Me.cb_interior.Text = "Interior"
-        Me.cb_interior.UseVisualStyleBackColor = True
         '
         'txt_number
         '
@@ -387,12 +265,6 @@ Partial Class Form1
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button1)
-        Me.TabPage2.Controls.Add(Me.Label11)
-        Me.TabPage2.Controls.Add(Me.s_templates)
-        Me.TabPage2.Controls.Add(Me.Button3)
-        Me.TabPage2.Controls.Add(Me.Label8)
-        Me.TabPage2.Controls.Add(Me.s_logo)
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.Label7)
         Me.TabPage2.Controls.Add(Me.s_projects)
@@ -404,68 +276,6 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Settings"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(251, 177)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 26)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Browse"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(10, 182)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(74, 17)
-        Me.Label11.TabIndex = 10
-        Me.Label11.Text = "Templates"
-        '
-        's_templates
-        '
-        Me.s_templates.Location = New System.Drawing.Point(14, 205)
-        Me.s_templates.Margin = New System.Windows.Forms.Padding(4)
-        Me.s_templates.Name = "s_templates"
-        Me.s_templates.Size = New System.Drawing.Size(340, 22)
-        Me.s_templates.TabIndex = 9
-        Me.s_templates.Text = "\\UNIX3\RIOT Library\RPM"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(252, 101)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(104, 26)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Browse"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(11, 106)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(40, 17)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Logo"
-        '
-        's_logo
-        '
-        Me.s_logo.Location = New System.Drawing.Point(15, 129)
-        Me.s_logo.Margin = New System.Windows.Forms.Padding(4)
-        Me.s_logo.Name = "s_logo"
-        Me.s_logo.Size = New System.Drawing.Size(340, 22)
-        Me.s_logo.TabIndex = 6
-        Me.s_logo.Text = "\\UNIX2\raid\RIOT_BRANDING_STUFF\logo.jpg"
         '
         'Button2
         '
@@ -502,10 +312,10 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(76, 15)
+        Me.PictureBox1.Location = New System.Drawing.Point(15, 13)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(265, 84)
+        Me.PictureBox1.Size = New System.Drawing.Size(159, 53)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
@@ -513,31 +323,31 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Turquoise
-        Me.Label10.Location = New System.Drawing.Point(116, 96)
+        Me.Label10.Font = New System.Drawing.Font("Product Sans", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(14, 70)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(187, 29)
+        Me.Label10.Size = New System.Drawing.Size(165, 30)
         Me.Label10.TabIndex = 8
-        Me.Label10.Text = "Project Builder"
+        Me.Label10.Text = "Folder Builder"
         '
         'LBL_VERSION
         '
         Me.LBL_VERSION.AutoSize = True
         Me.LBL_VERSION.ForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.LBL_VERSION.Location = New System.Drawing.Point(363, 15)
+        Me.LBL_VERSION.Location = New System.Drawing.Point(358, 13)
         Me.LBL_VERSION.Name = "LBL_VERSION"
         Me.LBL_VERSION.Size = New System.Drawing.Size(37, 17)
         Me.LBL_VERSION.TabIndex = 9
-        Me.LBL_VERSION.Text = "V0.1"
+        Me.LBL_VERSION.Text = "V0.2"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(412, 672)
+        Me.ClientSize = New System.Drawing.Size(413, 633)
         Me.Controls.Add(Me.LBL_VERSION)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.PictureBox1)
@@ -546,7 +356,7 @@ Partial Class Form1
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "RIOT Project Builder"
+        Me.Text = "RIOT Folder Builder"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -576,17 +386,8 @@ Partial Class Form1
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents deadlinedate As DateTimePicker
-    Friend WithEvents cb_rt As CheckBox
-    Friend WithEvents cb_vr As CheckBox
-    Friend WithEvents cb_exterior As CheckBox
-    Friend WithEvents cb_animation As CheckBox
-    Friend WithEvents cb_product As CheckBox
-    Friend WithEvents cb_interior As CheckBox
     Friend WithEvents txt_number As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents s_logo As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents s_projects As TextBox
@@ -594,11 +395,6 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents FolderBrowserDialog2 As FolderBrowserDialog
-    Friend WithEvents cb_studio As CheckBox
-    Friend WithEvents cb_default As CheckBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label11 As Label
-    Friend WithEvents s_templates As TextBox
     Friend WithEvents FolderBrowserDialog3 As FolderBrowserDialog
     Friend WithEvents LBL_VERSION As Label
 End Class

@@ -11,12 +11,6 @@ Public Class Form1
     Dim email As String
     Dim contact As String
     Dim deadline As Date
-    Dim ISinterior As Boolean
-    Dim ISexterior As Boolean
-    Dim ISrealtime As Boolean
-    Dim ISproduct As Boolean
-    Dim ISanimation As Boolean
-    Dim ISvr As Boolean
     Dim notes As String
     Dim makefolders As Boolean
     Dim makebrief As Boolean
@@ -49,7 +43,6 @@ Public Class Form1
                 If cb_folders.Checked = True Then
                     Buildfolders()
                     ShortcutBuilder()
-                    Templatefiles()
                     If cb_brief.Checked = True Then
                         GeneratePDF()
                     End If
@@ -74,10 +67,6 @@ Public Class Form1
         number = txt_number.Text
         notes = txt_notes.Text
         deadline = deadlinedate.Value
-        templatesroot = s_templates.Text
-
-
-
         projectslocation = s_projects.Text
 
         projectroot = $"{projectslocation}/{client}/{projectname}_{Date.Now.ToString("ddMMyy")}"
@@ -117,8 +106,7 @@ Public Class Form1
     End Sub
 
     Private Sub Buildfolders()
-        'BROKEN
-        'create root folder
+
         If Not Directory.Exists(clientroot) Then
             Directory.CreateDirectory(clientroot)
             makedirectories()
@@ -159,41 +147,14 @@ Public Class Form1
         Directory.CreateDirectory(projectfiles & "vpost")
         'run shortcut builder to generate email link
     End Sub
-    Private Sub Templatefiles()
 
-
-
-        If cb_default.Checked = True Then
-
-            My.Computer.FileSystem.CopyFile(templatesroot & "\MaxTemplate.Max", projectfiles & "/Scenes/" & client & "_" & projectname & ".max")
-
-        End If
-
-        If cb_interior.Checked = True Then
-
-            My.Computer.FileSystem.CopyFile(templatesroot & "\MaxTemplate.Max", projectfiles & "/Scenes/" & client & "_" & projectname & "_Interior.max")
-
-        End If
-
-        If cb_exterior.Checked = True Then
-
-            My.Computer.FileSystem.CopyFile(templatesroot & "\MaxTemplate.Max", projectfiles & "/Scenes/" & client & "_" & projectname & "_Exterior.max")
-
-        End If
-
-
-
-    End Sub
 
     Private Sub GeneratePDF()
 
         Dim renderer = New HtmlToPdf()
         Dim document As Object
 
-
-
-
-        document = renderer.RenderHtmlAsPdf("<font face=""verdana""><img src='" & s_logo.Text & "'height=""58"" width=""200""><h1>" & projectname & "</h1>" & "<h2>Client: " & client & "</h2>" & "<h3>Key Contact: " & contact & "</h3>" & "<h3>Email Address: " & email & "</h3>" & "<h3>Contact Number: " & number & "</h3>" & "<h3>Deadline: " & deadline & "</h3>" & "<h4>Notes: " & notes & "</h4></font>")
+        document = renderer.RenderHtmlAsPdf("<font face=""Product Sans""><img src=" & PictureBox1.ImageLocation & "''height=""58"" width=""200""><h1>" & projectname & "</h1>" & "<h2>Client: " & client & "</h2>" & "<h3>Key Contact: " & contact & "</h3>" & "<h3>Email Address: " & email & "</h3>" & "<h3>Contact Number: " & number & "</h3>" & "<h3>Deadline: " & deadline & "</h3>" & "<h4>Notes: " & notes & "</h4></font>")
 
         document.SaveAs(projectroot & "/" & projectname & " Project Information.pdf")
         System.Diagnostics.Process.Start(projectroot & "/" & projectname & " Project Information.pdf")
@@ -213,15 +174,6 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        FolderBrowserDialog2.ShowDialog()
-        s_logo.Text = FolderBrowserDialog2.SelectedPath
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        FolderBrowserDialog3.ShowDialog()
-        s_logo.Text = FolderBrowserDialog2.SelectedPath
-    End Sub
 
     Private Sub s_projects_TextChanged(sender As Object, e As EventArgs) Handles s_projects.TextChanged
 
